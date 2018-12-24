@@ -1,6 +1,6 @@
 import os
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 def file_path(name):
@@ -20,9 +20,11 @@ def desc():
 
 
 setup(
-    name='flask-admin-toggle-control',
-    version='0.1.0',
-    packages=['src/flask_admin_toggle_control'],
+    name='Flask-Admin-Toggle-Control',
+    version='0.1.1',
+    packages=find_packages('src'),
+    package_dir={'': 'src'},
+    include_package_data=True,
     url='https://github.com/artemShelest/flask-admin-toggle-control',
     license='MIT',
     author='Artem Shelest',

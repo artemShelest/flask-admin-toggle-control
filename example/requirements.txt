@@ -1,0 +1,4 @@
+Flask
+Flask-Admin
+Flask-Admin-Toggle-Control
+Flask-SQLAlchemy
