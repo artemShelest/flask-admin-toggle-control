@@ -22,7 +22,7 @@
     }
 
     function onClick(e) {
-        var $el = $(e.target);
+        var $el = $(e.currentTarget);
         var params = {};
         var value = !valueFromHtml($el);
         params['list_form_pk'] = $el.data('pk');
@@ -30,9 +30,13 @@
         if ($el.data('csrf')) {
             params['csrf_token'] = $el.data('csrf');
         }
+        var savePE = $el.css('pointer-events');
+        var saveCursor = $el.css('cursor');
+        $el.css('pointer-events', "none");
+        $el.css('cursor', "default");
         $.ajax({
             type: "POST",
-            url: $el.data('url'),
+            url: $el.data("url"),
             data: params,
             success: function (data, status) {
                 if (status === "success") {
@@ -43,6 +47,10 @@
             },
             error: function (xhr, message) {
                 alert("Query error: " + (xhr.responseText || message));
+            },
+            complete: function () {
+                $el.css('pointer-events', savePE);
+                $el.css('cursor', saveCursor);
             }
         });
     }
@@ -52,7 +60,7 @@
         $el.click(onClick);
     }
 
-    $('[data-role=toggle-control]').each(function () {
+    $('a[data-role=toggle-control]').each(function () {
         applyToggleControl($(this));
     });
 })();

@@ -1,3 +1,4 @@
-flask-admin
-wtforms
-jinja2
+Flask
+Flask-Admin
+WTForms
+Jinja2
