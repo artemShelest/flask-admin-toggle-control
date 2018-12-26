@@ -1,4 +1,0 @@
-Flask
-Flask-Admin
-WTForms
-Jinja2
