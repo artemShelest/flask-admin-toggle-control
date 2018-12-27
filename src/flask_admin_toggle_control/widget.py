@@ -21,6 +21,7 @@ class ToggleInlineWidget(XEditableWidget):
             kwargs['data-csrf'] = kwargs.pop("csrf", "")
             kwargs = self.get_kwargs(field, kwargs)
             kwargs['data-role'] = 'toggle-control'
+            kwargs['href'] = "#"
             kwargs.update(self._additional_kw)
             return HTMLString(
                 "<a {}>{}</a>".format(html_params(**kwargs), escape(display_value))
