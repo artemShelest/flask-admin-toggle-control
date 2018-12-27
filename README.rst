@@ -41,3 +41,9 @@ Edit your view class to integrate toggle control:
         column_toggle_control_list = ["boolean_field1", "boolean_field2"]
         column_editable_list = ["boolean_field1", "boolean_field2", "other_editable_field"]
 
+
+Serve component JS file from static endpoint, pass your application object as a parameter::
+
+    app = Flask(__name__)
+    flask_admin_toggle_control.init_static_ep(app)
+
