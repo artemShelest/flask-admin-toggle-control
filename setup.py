@@ -21,7 +21,7 @@ def desc():
 
 setup(
     name='Flask-Admin-Toggle-Control',
-    version='0.1.2',
+    version='0.1.3',
     packages=find_packages('src'),
     package_dir={'': 'src'},
     include_package_data=True,
