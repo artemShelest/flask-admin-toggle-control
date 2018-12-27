@@ -8,11 +8,11 @@ Better UX
 
 Replace this:
 
-.. image:: ./res/original.gif
+.. image:: https://raw.githubusercontent.com/artemShelest/flask-admin-toggle-control/master/res/original.gif
 
 with this:
 
-.. image:: ./res/new.gif
+.. image:: https://raw.githubusercontent.com/artemShelest/flask-admin-toggle-control/master/res/new.gif
 
 Installation
 ------------
